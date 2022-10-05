@@ -1,0 +1,70 @@
+.recentWork {
+	font-size: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10vh 0;
+	div {
+		z-index: 2;
+	}
+	.shortNote {
+		p {
+			margin: 0 2vw;
+		}
+	}
+}
+.workContainer {
+	width: 100%;
+	margin-top: 15vh;
+	div {
+		width: inherit;
+		height: 27vh;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		--h1: 0%;
+		a {
+			margin-left: 6vw;
+			margin-right: 6vw;
+			cursor: pointer;
+			font-size: 4rem;
+			transition: 0.5s;
+			z-index: 2;
+		}
+		a:hover {
+			letter-spacing: 1px;
+		}
+		img {
+			width: 100%;
+			height: 400px;
+			opacity: var(--h1);
+			position: relative;
+			top: 0;
+			z-index: 1;
+			transition: 0.5s;
+		}
+		.Link {
+			text-decoration: none;
+			color: #ccc;
+		}
+	}
+	div:hover {
+		--h1: 100%;
+	}
+}
+.soon {
+	margin-left: 5vw;
+	color: red;
+	font-size: 2rem;
+}
+
+@media (max-width: 700px) {
+	.workContainer {
+		div {
+			--h1: 100%;
+			img {
+				height: 100px;
+			}
+		}
+	}
+}

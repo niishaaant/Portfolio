@@ -1,0 +1,124 @@
+@keyframes line {
+	0% {
+		opacity: 100;
+		width: 3%;
+	}
+	5% {
+		opacity: 0;
+		width: 3%;
+	}
+	15% {
+		opacity: 0;
+		width: 3%;
+	}
+	20% {
+		opacity: 100;
+		width: 3%;
+	}
+	25% {
+		opacity: 0;
+		width: 3%;
+	}
+	35% {
+		opacity: 0;
+		width: 3%;
+	}
+	40% {
+		opacity: 100;
+		width: 3%;
+	}
+	100% {
+		opacity: 100;
+		width: 100%;
+	}
+}
+
+.aboutContainer {
+	padding-top: 15vh;
+	width: 100vw;
+	font-size: 2rem;
+	padding-left: 3vw;
+	padding-right: 3vw;
+	div {
+		overflow: hidden;
+		span {
+			z-index: 2;
+			position: relative;
+		}
+	}
+	.heading {
+		font-size: 5rem;
+		padding: 3vh 0;
+	}
+	.aboutContent {
+		padding: 5vh 0;
+		font-size: 3rem;
+	}
+	.animatedLine {
+		width: 100%;
+		height: 2px;
+		background-color: #ccc;
+		animation: line 4s;
+		animation-iteration-count: infinite;
+		z-index: 2;
+		position: relative;
+	}
+	.container {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		height: 40vh;
+		align-items: center;
+		margin-top: 5vh;
+		.containerContent {
+			padding: 2vw;
+		}
+		.img {
+			height: inherit;
+			background-image: url('../../utils/me.jpg');
+			background-position: center;
+			background-repeat: no-repeat;
+			z-index: 2;
+			position: relative;
+			transition: 0.5s;
+			background-size: 470px 470px;
+		}
+		.img:hover {
+			height: 30vh;
+			background-size: 600px 600px;
+		}
+	}
+	.cardContainer {
+		display: flex;
+		justify-content: space-between;
+		line-height: 4rem;
+		span {
+			text-decoration: underline overline;
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	.aboutContainer {
+		.container {
+			grid-template-columns: 100%;
+			height: 55vh;
+			.containerContent {
+				padding: 0vw;
+				height: 25vh;
+			}
+			.img {
+				height: 30vh;
+				background-size: 350px 350px;
+			}
+		}
+		.cardContainer {
+			display: grid;
+			grid-template-columns: 100%;
+			place-items: center;
+			line-height: 4rem;
+			span {
+				text-decoration: underline overline;
+			}
+		}
+	}
+}

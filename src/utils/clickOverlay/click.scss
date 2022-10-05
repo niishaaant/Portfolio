@@ -1,0 +1,42 @@
+@keyframes fadeINOUT {
+	0% {
+		opacity: 100%;
+	}
+	50% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+
+.fullscreen {
+	width: 100vw;
+	height: 100vh;
+	background-color: #333;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	transition: 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	transition: 1s;
+}
+.notready {
+	div {
+		animation: fadeINOUT 1.5s;
+		animation-iteration-count: infinite;
+	}
+}
+.ready {
+	div {
+		cursor: pointer;
+	}
+}
+.clicked {
+	opacity: 0;
+	height: 0;
+}

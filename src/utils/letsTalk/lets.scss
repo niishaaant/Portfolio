@@ -1,0 +1,75 @@
+@keyframes hr {
+	0% {
+		opacity: 100;
+		height: 5vh;
+	}
+	5% {
+		opacity: 0;
+		height: 5vh;
+	}
+	15% {
+		opacity: 0;
+		height: 5vh;
+	}
+	20% {
+		opacity: 100;
+		height: 5vh;
+	}
+	25% {
+		opacity: 0;
+		height: 5vh;
+	}
+	35% {
+		opacity: 0;
+		height: 5vh;
+	}
+	40% {
+		opacity: 100;
+		height: 5vh;
+	}
+	100% {
+		opacity: 100;
+		height: 30vh;
+	}
+}
+
+@media (max-width: 500px) {
+	.hr {
+		margin-right: 2rem;
+	}
+}
+
+.letsTalkContainer {
+	display: flex;
+	padding: 5vh 2vw;
+	font-size: 2rem;
+	align-items: center;
+	justify-content: space-between;
+	height: 40vh;
+	.interested {
+		font-size: 4rem;
+	}
+	.hr {
+		background-color: #ccc;
+		width: 2px;
+		height: 30vh;
+		animation: hr 4s;
+		animation-iteration-count: infinite;
+	}
+	div {
+		z-index: 2;
+		a {
+			text-decoration: none;
+			color: #ccc;
+		}
+	}
+	.getInTouch {
+		padding: 0.5rem 3rem 3rem 0.5rem;
+		border-radius: 10px;
+		border: 2px solid #ccc;
+	}
+	.getInTouch:hover {
+		color: rgba($color: #ccc, $alpha: 0.9);
+		border: 2px solid rgba($color: #ccc, $alpha: 0.9);
+	}
+}

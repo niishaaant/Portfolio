@@ -1,0 +1,93 @@
+@keyframes slideUp {
+	0% {
+		transform: translateY(100px);
+		visibility: visible;
+	}
+	100% {
+		transform: translateY(0);
+		visibility: visible;
+	}
+}
+
+@keyframes line {
+	0% {
+		opacity: 100;
+		width: 3%;
+	}
+	5% {
+		opacity: 0;
+		width: 3%;
+	}
+	15% {
+		opacity: 0;
+		width: 3%;
+	}
+	20% {
+		opacity: 100;
+		width: 3%;
+	}
+	25% {
+		opacity: 0;
+		width: 3%;
+	}
+	35% {
+		opacity: 0;
+		width: 3%;
+	}
+	40% {
+		opacity: 100;
+		width: 3%;
+	}
+	100% {
+		opacity: 100;
+		width: 100%;
+	}
+}
+
+.landing {
+	width: 100vw;
+	height: 100vh;
+	padding: 5vw;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	font-size: 4rem;
+	justify-content: center;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	span {
+		z-index: 2;
+		div {
+			overflow: hidden;
+			p {
+				line-height: 100%;
+				margin: 1vw;
+				animation: slideUp 1s forwards;
+			}
+			.late {
+				animation: slideUp 1s 1s forwards;
+				visibility: hidden;
+			}
+		}
+		.animatedLine {
+			width: 100%;
+			height: 2px;
+			margin-left: 5px;
+			margin-right: 5px;
+			background-color: #ccc;
+			animation: line 4s;
+			animation-iteration-count: infinite;
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	.landing {
+		span {
+			div {
+				p {
+					line-height: 1.2;
+				}
+			}
+		}
+	}
+}

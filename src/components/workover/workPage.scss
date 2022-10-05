@@ -1,0 +1,105 @@
+@keyframes line {
+	0% {
+		opacity: 100;
+		width: 3%;
+	}
+	5% {
+		opacity: 0;
+		width: 3%;
+	}
+	15% {
+		opacity: 0;
+		width: 3%;
+	}
+	20% {
+		opacity: 100;
+		width: 3%;
+	}
+	25% {
+		opacity: 0;
+		width: 3%;
+	}
+	35% {
+		opacity: 0;
+		width: 3%;
+	}
+	40% {
+		opacity: 100;
+		width: 3%;
+	}
+	100% {
+		opacity: 100;
+		width: 100%;
+	}
+}
+
+.workOverlayContainer {
+	height: 100vh;
+	width: 100vw;
+	padding: 7vw 3vw;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	font-size: 2rem;
+	div {
+		span {
+			z-index: 2;
+			position: relative;
+		}
+	}
+	.Left {
+		height: 100vh;
+		width: 55vw;
+		.animatedLine {
+			width: 100%;
+			height: 2px;
+			background-color: #ccc;
+			animation: line 4s;
+			animation-iteration-count: infinite;
+			z-index: 2;
+			position: relative;
+		}
+		.heading {
+			font-size: 4rem;
+			padding-bottom: 2rem;
+		}
+		.para {
+			padding-top: 1.5rem;
+			a {
+				text-decoration: none;
+				color: #ccc;
+				span {
+					padding: 6px;
+					border: 1px solid #ccc;
+					border-radius: 4px;
+				}
+				.thisLink {
+					color: red;
+					border: 2px solid #ccc;
+				}
+			}
+			.comingSoon {
+				color: red;
+			}
+		}
+	}
+	.Right {
+		height: 100vh;
+		width: 45vw;
+		.collargeContainer {
+			overflow-x: scroll;
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	.workOverlayContainer {
+		.Left {
+			width: 100vw;
+			padding-top: 6rem;
+		}
+		.Right {
+			display: none;
+		}
+	}
+}

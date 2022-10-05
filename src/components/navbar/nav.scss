@@ -1,0 +1,117 @@
+.navContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2vh 3vw;
+	position: absolute;
+	width: 100vw;
+	height: 10vh;
+	z-index: 599;
+	border-bottom: 2px solid #ccc;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-weight: 500;
+	color: #ccc;
+	transition-delay: 0.45s;
+	div {
+		font-size: 2.25rem;
+		z-index: 1000;
+	}
+	.name {
+		font-size: 3rem;
+
+		a {
+			text-decoration: none;
+			color: #ccc;
+			transition: 0.5s;
+		}
+		a:hover {
+			letter-spacing: 1px;
+		}
+	}
+	.name.small {
+		display: block;
+	}
+	.name.big {
+		display: none;
+	}
+}
+.navContainer.show {
+	border-bottom: 2px solid #333;
+	background-color: #ccc;
+	div {
+		color: #333;
+	}
+	.name {
+		a {
+			color: #333;
+		}
+		a:hover {
+			letter-spacing: 1px;
+		}
+	}
+}
+.lineContainer.cross {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	cursor: pointer;
+
+	.lineTop {
+		height: 2px;
+		width: 60px;
+		background-color: #333;
+		top: 25px;
+		transform: rotate(45deg);
+		left: 0;
+		position: absolute;
+		transition: 0.41s;
+	}
+	.lineDown {
+		height: 2px;
+		width: 60px;
+		background-color: #333;
+		top: 25px;
+		transform: rotate(-45deg);
+		right: 0;
+		position: absolute;
+		transition: 0.41s;
+	}
+}
+.lineContainer {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	cursor: pointer;
+	.lineTop {
+		height: 2px;
+		width: inherit;
+		background-color: #ccc;
+		top: 20px;
+		right: 0;
+		position: absolute;
+		transition: 0.41s;
+	}
+	.lineDown {
+		height: 2px;
+		width: inherit;
+		background-color: #ccc;
+		top: 30px;
+		left: 0;
+		position: absolute;
+		transition: 0.41s;
+	}
+}
+.lineContainer:hover {
+	.lineTop {
+		right: 5px;
+	}
+	.lineDown {
+		left: 5px;
+	}
+}
+.lineContainer.cross:hover {
+	.lineTop,
+	.lineDown {
+		width: 50px;
+	}
+}
